@@ -26,14 +26,15 @@ This site incorporates the following frameworks and languages:
 - CSS 3
 - jQuery 3.6.0
 - Bootstrap 4.5
+- Node Package Manager/Node.js
+- A full list of libraries and dependencies can be viewed on this project's `package.json` configuration file
 
-The following software tools were used to develop this page:
+The following development tools were used to develop this page:
 
 - VS Code
 - Google Chrome
 - Git
-- Node.js/npm
-- A full list of libraries and dependencies can be viewed on this project's configuration file: `package.json`
+
 
 ## Known Issues
 
