@@ -33,3 +33,26 @@ $("#search-btn").on("click", function(event) {
     });
   }
 });
+
+// random logic
+
+$('#random-btn').on("click",function(event){
+  event.preventDefault();
+
+  let request = new XMLHttpRequest();
+  let url = `https://api.giphy.com/v1/gifs/random?api_key=${process.env.API_KEY}&limit=5&offset=0&rating=pg-13&lang=en`;
+
+  request.onreadystatechange = function(){
+    if (this.readyState === 4 && this.status === 200) {
+      const response = JSON.parse(this.responseText);
+      getElements(response);
+    }
+  };
+
+  request.open("GET", url, true);
+  request.send();
+
+  function getElements(response) {
+    $('#output').html(`<img class="result-img" src="${response.data.images.original.url}">`);
+  }
+});
