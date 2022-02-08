@@ -35,7 +35,7 @@ export default class Gif {
       const url = `https://api.giphy.com/v1/gifs/trending?api_key=${process.env.API_KEY}&limit=5&offset=0&rating=pg-13&lang=en`;
       request.onload = function() {
         if (this.status === 200) {
-          resolve (request.respone);
+          resolve (request.response);
         } else {
           reject (request.response);
         }
